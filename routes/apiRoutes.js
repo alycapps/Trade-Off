@@ -29,13 +29,35 @@ module.exports = function(app) {
   //   });
   // });
 
+  // ========= User Bio Routes ===========
 
-   //Get all users -- veryify table is working
-   app.get("/api/userBios", function(req, res) {
+  //Get all userBios -- verify table is working
+  app.get("/api/userBios", function(req, res) {
     db.userBios.findAll({}).then(function(dbUserBios) {
-      console.log(dbUserBios);
+      res.json(dbUserBios);
     });
   });
+
+  // Update a userBio
+  app.post("/api/userBios/:id", function(req, res) {
+    db.userBios.update(req.body).then(function(dbUserBios) {
+      res.json(dbUserBios);
+    });
+  });
+
+  // Delete a userBio
+    app.delete("/api/userBios/:id", function(req, res) {
+      db.userBios.destroy({
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbProducts) {
+        res.json(dbuserBios);
+      });
+    });
+  };
+
+  // ========= Product Routes ===========
 
   //Get all products from all users
   app.get("/api/products", function(req, res) {
@@ -44,12 +66,12 @@ module.exports = function(app) {
     });
   });
 
-  //Get all products for the logged in user --> need to associate users to their products to retrieve them (left-join)
+  //Get all products for the logged in user
   app.get("/api/products/:userId", function(req, res) {
     db.Products.findAll({
-      where: { 
-        userId: req.params.userId 
-      } 
+      where: {
+        userId: req.params.userId
+      }
     }).then(function(dbProducts) {
       res.json(dbProducts);
     });
@@ -62,22 +84,21 @@ module.exports = function(app) {
     });
   });
 
- // Update a product
- app.post("/api/products/:id", function(req, res) {
-  db.Products.update(req.body).then(function(dbProducts) {
-    res.json(dbProducts);
-  });
-});
-
-  // Delete a product
-  app.delete("/api/products/:id", function(req, res) {
-    db.Products.destroy({ 
-      where: {
-        id: req.params.id 
-      } 
-    }).then(function(dbProducts) {
+  // Update a product
+  app.post("/api/products/:id", function(req, res) {
+    db.Products.update(req.body).then(function(dbProducts) {
       res.json(dbProducts);
     });
   });
 
+  // Delete a product
+  app.delete("/api/products/:id", function(req, res) {
+    db.Products.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
 };
