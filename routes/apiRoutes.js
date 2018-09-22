@@ -1,7 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
-// Get all examples
+  // Get all examples
   // app.get("/api/examples", function(req, res) {
   //   db.Example.findAll({}).then(function(dbExamples) {
   //     res.json(dbExamples);
@@ -29,13 +29,12 @@ module.exports = function(app) {
   //   });
   // });
 
-
   // ========= User Bio Routes ===========
 
   //Get all userBios -- verify table is working
   app.get("/api/userBios", function(req, res) {
     db.userBios.findAll({}).then(function(dbUserBios) {
-      console.log(dbUserBios);
+      res.json(dbUserBios);
     });
   });
 
@@ -47,17 +46,18 @@ module.exports = function(app) {
   });
 
   // Delete a userBio
-  app.delete("/api/userBios/:id", function(req, res) {
-    db.userBios.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(dbUserBios) {
-      res.json(dbUserBios);
+    app.delete("/api/userBios/:id", function(req, res) {
+      db.userBios.destroy({
+        where: {
+          id: req.params.id
+        }
+      }).then(function(dbProducts) {
+        res.json(dbuserBios);
+      });
     });
-  });
+  };
 
- // ========= Product Routes ===========
+  // ========= Product Routes ===========
 
   //Get all products from all users
   app.get("/api/products", function(req, res) {
