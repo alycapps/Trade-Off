@@ -8,13 +8,13 @@ INSERT INTO userBios (userName, location, bio) VALUES ("Keli", "Chapel Hill, NC"
 -- Product Dummy Data
 
 --Need to associate this product to Audrey's ID
-INSERT INTO products (item_name, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");
+INSERT INTO products (item, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");
 
 --Need to associate this product to Bill's ID
-INSERT INTO products (item_name, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");
+INSERT INTO products (item, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");
 
 --Need to associate this product to Johnny's ID
-INSERT INTO products (item_name, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");
+INSERT INTO products (item, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");
 
 --Need to associate this product to Keli's ID
-INSERT INTO products (item_name, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");
+INSERT INTO products (item, description, price, negotiable, barter) VALUES ("Table", "brown coffee table", "100", "0", "0");

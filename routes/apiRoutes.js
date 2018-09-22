@@ -29,6 +29,14 @@ module.exports = function(app) {
   //   });
   // });
 
+
+   //Get all users -- verify table is working
+   app.get("/api/userBio", function(req, res) {
+    db.Products.findAll({}).then(function(dbProducts) {
+      console.log(dbProducts);
+    });
+  });
+
   //Get all products from all users
   app.get("/api/products", function(req, res) {
     db.Products.findAll({}).then(function(dbProducts) {
