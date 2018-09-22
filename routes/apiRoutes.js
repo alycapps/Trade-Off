@@ -62,12 +62,12 @@ module.exports = function(app) {
     });
   });
 
- // Update a product
- app.post("/api/products/:id", function(req, res) {
-  db.Products.update(req.body).then(function(dbProducts) {
-    res.json(dbProducts);
+  // Update a product
+  app.post("/api/products/:id", function(req, res) {
+    db.Products.update(req.body).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
   });
-});
 
   // Delete a product
   app.delete("/api/products/:id", function(req, res) {
