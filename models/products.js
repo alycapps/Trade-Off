@@ -27,7 +27,16 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1, 300]
       }
-    }
+    },
   });
+
+  Products.associate = function(models) {
+    Products.belongsTo(models.UserBio, {
+      foreignKey: {
+        name: "userId",
+        allowNull: false
+      }
+    });
+  };
   return Products;
 };
