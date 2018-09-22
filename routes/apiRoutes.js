@@ -2,30 +2,46 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+  // app.get("/api/examples", function(req, res) {
+  //   db.Example.findAll({}).then(function(dbExamples) {
+  //     res.json(dbExamples);
+  //   });
+  // });
 
   // Get an example by id
-  app.get("/api/examples/:id", function(req, res) {
-    db.Example.findOne({where: {id: req.params.id}}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+  // app.get("/api/examples/:id", function(req, res) {
+  //   db.Example.findOne({where: {id: req.params.id}}).then(function(dbExamples) {
+  //     res.json(dbExamples);
+  //   });
+  // });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // app.post("/api/examples", function(req, res) {
+  //   db.Example.create(req.body).then(function(dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
+
+  // Delete an example by id
+  // app.delete("/api/examples/:id", function(req, res) {
+  //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
+  //     res.json(dbExample);
+  //   });
+  // });
+
+  //Get all products from all users
+  app.get("/api/products", function(req, res) {
+    db.Products.findAll({}).then(function(dbProducts) {
+      res.json(dbProducts);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  //Get all products for the logged in user --> need to associate users to their products to retrieve them (left-join)
+  app.get("/api/products/:id", function(req, res) {
+    db.Products.findAll({ where: { id: req.params.id } }).then(function(dbProducts) {
+      res.json(dbProducts);
     });
   });
+
+
 };
