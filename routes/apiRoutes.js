@@ -46,16 +46,16 @@ module.exports = function(app) {
   });
 
   // Delete a userBio
-    app.delete("/api/userBios/:id", function(req, res) {
-      db.userBios.destroy({
-        where: {
-          id: req.params.id
-        }
-      }).then(function(dbProducts) {
-        res.json(dbuserBios);
-      });
+  app.delete("/api/userBios/:id", function(req, res) {
+    db.userBios.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbuserBios) {
+      res.json(dbuserBios);
     });
-  };
+  });
+
 
   // ========= Product Routes ===========
 

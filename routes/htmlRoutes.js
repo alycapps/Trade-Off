@@ -25,13 +25,13 @@ module.exports = function(app) {
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
-  app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
-  });
+  // app.get("/members", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/members.html"));
+  // });
 
-  app.get("/example/:id", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/example.html"));
-  });
+  // app.get("/example/:id", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/example.html"));
+  // });
 
   ///ABOVE ARE ALL EXAMPLE ROUTES TO BE DELETED WHEN PROJECT DONE
 
@@ -61,7 +61,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/store.html"));
   });
 
-  app.get("/example/:id", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/example.html"));
+  app.get("/store/:id", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/store.html"));
   });
 };
