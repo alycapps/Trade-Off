@@ -15,8 +15,15 @@ form.login {
   line-height: 2.5;
 }
 
-/*store front css*/
+/*store front */
 
-.panel-heading {
+.h2, .h4 {
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+.text-center {
+  text-align: center;
   color: blue;
 }
+
