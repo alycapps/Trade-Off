@@ -37,8 +37,15 @@ body {
     color: white;
 }
 
+.text-decor2 {
+    color: white;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+}
+
 .buttons{
-    width: 250px;
+    width: 150px;
     background-color: brown;
     margin-left: 55px;
     border: none;
@@ -49,6 +56,17 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.buttons2 {
+    width: 110px;
+    background-color: White;
+    margin-left: 2px;
+    border: none;
+    border-radius: 25px;
+    color: brown;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .button-box{
     width: 700px;
     height: 40px;
@@ -69,11 +87,25 @@ body {
     width:390px;
 }
 
-.update-form, .purchase-form, .trade-form{
+.update-form, .purchase-form, .trade-form {
     background-color: 	rgba(150, 0, 0, 0.75);
     width: 380px;
     display: none;
     border-radius: 25px;
     padding-bottom: 10px;
     margin-bottom: 25px;
+}
+
+#contactFs {
+    background-color: 	rgba(150, 0, 0, 0.75);
+    width: 380px;
+    display: none;
+    border-radius: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+#email, #message {
+    width: 360px;
 }
