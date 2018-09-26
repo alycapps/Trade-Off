@@ -27,6 +27,15 @@ form.login {
   color: blue;
 }
 
-.p {
-  color: white;
+.panel-default>.panel-footer {
+  background-color: blue;
+  color: #333333;
+  border-color: transparent;
+
+}
+
+.panel-default>.panel-heading {
+  background-color: blue !important;
+  color: #333333;
+  border-color: transparent;
 }
