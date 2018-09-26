@@ -3,6 +3,16 @@ form.login {
   margin-top: 50px;
 }
 
+#shadow {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px silver, 0 0 5px grey;
+  font-size: 20px;
+}
+ 
+.signUpForm {
+  color: white;
+  font-style: bold;
+}
 .member-name-wrapper {
   padding: 15px;
 }
