@@ -24,13 +24,13 @@
         <div class="store-details col-xs-4">    
             <img src="images/olive.jpg" width="350px" class="olive-image" alt="Artisan Olive Logo">
             
-            <div class="row">
-                <div class="button-minibox col-xs-4">
-                    <button class="stock-button">UPDATE STOCK</button>
-                </div>
+        <div class="row">
+            <div class="button-minibox col-xs-4">
+                <button class="stock-button">UPDATE STOCK</button>
             </div>
+        </div>
 
-            <div class="row">
+        <div class="row">
                 <div class="shop-box col-xs-4">
                     <h4 class="text-decor">The Artisan Olive</h4>
                     <p></p>
@@ -67,13 +67,13 @@
                     <label class="text-decor" for="addStock">Add Stock</label>
                     <input type="integer" class="form-control" id="addStock" placeholder="0">
                 </div>
-                    <button id="add" type="submit" class="btn btn-default">Update/Add</button>
-                    <button id="delete"type="submit" class="btn btn-default">Delete Stock</button>
-                    <button id="back" type="submit" class="btn btn-default">BACK</button>
+                    <button id="add" type="submit" class="buttons2">Update/Add</button>
+                    <button id="delete"type="submit" class="buttons2">Delete Stock</button>
+                    <button id="back" type="submit" class="buttons2">BACK</button>
                 </form>
         </div>
 
-      <div class="purchase-form col-xs-4">
+        <div class="purchase-form col-xs-4">
             <h2 class="text-decor">Purchase Products</h2>
                 <form class="login">
                 <div class="form-group">
@@ -88,12 +88,12 @@
                     <label class="text-decor" for="price">Price</label>
                     <input type="integer" class="form-control" id="price" placeholder="Price">
                 </div>
-                    <button id="buy" type="submit" class="btn btn-default">Purchase</button>
-                    <button id="back" type="submit" class="btn btn-default">BACK</button>
+                    <button id="buy" type="submit" class="buttons2">Purchase</button>
+                    <button id="back" type="submit" class="buttons2">BACK</button>
                 </form>
-      </div>
+        </div>
 
-      <div class="trade-form col-xs-4">
+        <div class="trade-form col-xs-4">
             <h2 class="text-decor">Trade Products</h2>
                 <form class="login">
                 <div class="form-group">
@@ -108,14 +108,34 @@
                     <label class="text-decor" for="price">Trade Offer</label>
                     <input type="integer" class="form-control" id="price" placeholder="Price">
                 </div>
-                    <button type="sendOffer" class="btn btn-default">Send Offer</button>
-                    <button id="back" type="submit" class="btn btn-default">BACK</button>
+                    <button type="sendOffer" class="buttons2">Send Offer</button>
+                    <button id="back" type="submit" class="buttons2">BACK</button>
                 </form>
-      </div>
+        </div>
+
+        <div id="contactFs" class="col-xs-4">
+            <h2 class="text-decor2">Contact the Artisan Olive</h2>
+            <div id="contact-form">
+            <form method="POST" action="https://formspree.io/mwksax@aol.com">
+                <input type="hidden" name="_subject" value="Contact request from personal website" />
+                <br><br>
+                <input id="email" type="email" name="_replyto" placeholder="Your email" required>
+                <br><br>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                <br><br>
+                <button class="buttons2" type="submit">Send</button>
+                <button id="back" type="submit" class="buttons2">Back</button>
+            </form>
+            </div>
+        </div>
+
+    
+
 
         <div class="col-xs-6 button-box">
            <button id="purchase" class="buttons">PURCHASE</button>
            <button id="trade" class="buttons">TRADE</button>
+           <button id='contact' class="buttons">CONTACT</button>
         </div>
 
         <div class="stock-items col-xs-6" id="stock-items">
