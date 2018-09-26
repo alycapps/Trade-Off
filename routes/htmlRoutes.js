@@ -65,7 +65,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/store.html"));
   });
 
-  app.get("/dummystore", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "./dummystore2/dummystore2.html"));
-  });
+  // app.get("/dummystore", isAuthenticated, function(req, res) {
+  //   res.sendFile(path.join(__dirname, "./dummystore2/dummystore2.html"));
+  // });
 };

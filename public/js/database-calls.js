@@ -36,7 +36,7 @@ $("#add").on("click", function(event) {
 });
 
 // When the page loads, grab all products for the logged in user --> currently grabbing all products NOT just for user
-$.get("/api/products/", function(data) {
+$.get("/api/products/1", function(data) {
   console.log(data);
 
   //If there is data
