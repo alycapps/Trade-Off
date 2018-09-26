@@ -1,4 +1,7 @@
 -- User Dummy Data
+INSERT INTO users (email, password, createdAt, updatedAt) VALUES ("sam@email.com", "test", "0000-00-00 00:00:00", "0000-00-00 00:00:00");
+INSERT INTO users (email, password, createdAt, updatedAt) VALUES ("bill@email.com", "test", "0000-00-00 00:00:00", "0000-00-00 00:00:00");
+INSERT INTO users (email, password, createdAt, updatedAt) VALUES ("erica@email.com", "test", "0000-00-00 00:00:00", "0000-00-00 00:00:00");
 
 -- UserBios Dummy Data
 INSERT INTO userBios (userName, location, bio, createdAt, updatedAt) VALUES ("Sam", "Durham, NC", "Developer interested in all things electronic", "0000-00-00 00:00:00", "0000-00-00 00:00:00");

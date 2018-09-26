@@ -13,23 +13,15 @@ module.exports = function(sequelize, DataTypes) {
       msg: "Must be less than 250 characters."
     }
   });
-  UserBio.associate = function(models) {
-    UserBio.belongsTo(models.Users, {
-      foreignKey: {
-        name: "userId",
-        allowNull: false
-      }
-    });
-  };
 
   UserBio.associate = function(models) {
-  UserBio.hasMany(models.Products, {
+    UserBio.hasMany(models.Products, {
       onDelete: "cascade",
       constraints: true,
       foreignKey: {
         name: "userId"
       }
     });
- };
+};
   return UserBio;
 };
