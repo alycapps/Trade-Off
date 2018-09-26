@@ -33,21 +33,32 @@ module.exports = function(app) {
 
   //Get all userBios -- verify table is working
   app.get("/api/userBios", function(req, res) {
-    db.userBios.findAll({}).then(function(dbUserBios) {
+    db.UserBio.findAll({}).then(function(dbUserBios) {
       res.json(dbUserBios);
+    });
+  });
+
+  //Get the information of the logged in user
+  app.get("/api/userBios/:id", function(req, res) {
+    db.UserBio.findAll({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbUserBio) {
+      res.json(dbUserBio);
     });
   });
 
   // Update a userBio
   app.post("/api/userBios/:id", function(req, res) {
-    db.userBios.update(req.body).then(function(dbUserBios) {
+    db.UserBio.update(req.body).then(function(dbUserBios) {
       res.json(dbUserBios);
     });
   });
 
   // Delete a userBio
   app.delete("/api/userBios/:id", function(req, res) {
-    db.userBios.destroy({
+    db.UserBio.destroy({
       where: {
         id: req.params.id
       }
