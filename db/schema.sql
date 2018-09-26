@@ -1,7 +1,8 @@
 DROP DATABASE IF EXISTS store_db;
 CREATE DATABASE store_db;
 
-use store_db;
+USE store_db;
 
+select * FROM Users;
 select * from UserBios;
 select * from Products;

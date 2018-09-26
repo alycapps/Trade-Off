@@ -14,13 +14,22 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
   UserBio.associate = function(models) {
-    UserBio.hasMany(models.Products, {
+    UserBio.belongsTo(models.Users, {
+      foreignKey: {
+        name: "userId",
+        allowNull: false
+      }
+    });
+  };
+
+  UserBio.associate = function(models) {
+  UserBio.hasMany(models.Products, {
       onDelete: "cascade",
       constraints: true,
       foreignKey: {
         name: "userId"
       }
     });
-  };
+ };
   return UserBio;
 };
