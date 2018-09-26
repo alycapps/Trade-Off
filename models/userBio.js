@@ -13,6 +13,7 @@ module.exports = function(sequelize, DataTypes) {
       msg: "Must be less than 250 characters."
     }
   });
+
   UserBio.associate = function(models) {
     UserBio.hasMany(models.Products, {
       onDelete: "cascade",
@@ -21,6 +22,6 @@ module.exports = function(sequelize, DataTypes) {
         name: "userId"
       }
     });
-  };
+};
   return UserBio;
 };

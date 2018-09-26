@@ -49,3 +49,4 @@ function purchaseForm(){
 $('#buy').on('click', function(){
     purchaseForm();
 })
+
