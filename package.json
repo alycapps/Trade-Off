@@ -8,7 +8,7 @@
     "watch": "nodemon server.js --ignore public/",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint --fix .",
-    "test": "npm run lint && NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "npm run lint && SET NODE_ENV=test mocha -u tdd --reporter spec --exit"
   },
   "keywords": [],
   "author": "",

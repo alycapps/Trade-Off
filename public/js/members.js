@@ -118,12 +118,14 @@ $(document).ready(function() {
   var loadDetails = function(id) {
     API.getExample(id).then(function(data) {
       console.log(data);
-      var $id = $('<p>').html(`<strong>ID</strong>: ${data.id}`);
-      var $text = $('<p>').html(`<strong>Text</strong>: ${data.text}`);
-      var $desc = $('<p>').html(`<strong>Description:</strong> ${data.description}`);
+      var $id = $("<p>").html("<strong>ID</strong>: ${data.id}");
+      var $text = $("<p>").html("<strong>Text</strong>: ${data.text}");
+      var $desc = $("<p>").html(
+        "<strong>Description:</strong> ${data.description}"
+      );
       $details.append($id, $text, $desc);
     });
-  }
+  };
 
   // Add event listeners to the submit and delete buttons
   $submitBtn.on("click", handleFormSubmit);
@@ -138,5 +140,4 @@ $(document).ready(function() {
     var id = page.split("/")[2];
     loadDetails(id);
   }
-
 });
