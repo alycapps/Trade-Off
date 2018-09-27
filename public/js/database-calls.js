@@ -9,17 +9,25 @@ $("#add").on("click", function(event) {
 
   // Make a new product object
   var newProduct = {
-    item: $("#item-name").val().trim(),
-    description: $("#description").val().trim(),
-    price: $("#price").val().trim(),
+    item: $("#item-name")
+      .val()
+      .trim(),
+    description: $("#description")
+      .val()
+      .trim(),
+    price: $("#price")
+      .val()
+      .trim(),
     //negotiable: $("#negotiable").val().trim(),
-    userId: $("#userId").val().trim(),
+    userId: $("#userId")
+      .val()
+      .trim()
   };
 
   console.log("Values from form: " + newProduct);
 
   // Send an AJAX POST-request with jQuery
-  $.post("/api/products/", newProduct) 
+  $.post("/api/products/", newProduct)
     // On success, run the following code
     .then(function() {
       var row = $("<div>");
@@ -32,12 +40,12 @@ $("#add").on("click", function(event) {
 
       $("#stock-items").prepend(row);
     });
- 
+
   //Empty each input box by replacing the value with an empty string
   $("#item-name").val(""),
   $("#description").val(""),
   $("#price").val(""),
-  $("#userId").val("")
+  $("#userId").val("");
 });
 
 // When the page loads, grab all products for the logged in user --> currently grabbing all products NOT just for user
