@@ -22,6 +22,6 @@ module.exports = function(sequelize, DataTypes) {
         name: "userId"
       }
     });
-};
+  };
   return UserBio;
 };
