@@ -16,6 +16,11 @@ $(document).ready(function() {
       description: descriptionInput.val().trim()
     };
     console.log("User Data: " + userData);
+   console.log('email:', emailInput.val().trim())
+   console.log('passsword:', passwordInput.val().trim())
+   console.log('store name :', storeInput.val().trim())
+   console.log('description:', descriptionInput.val().trim())
+
     if (!userData.email || !userData.password) {
       return;
     }
@@ -23,7 +28,7 @@ $(document).ready(function() {
     signUpUser(userData.email, userData.password, userData.storeName, userData.description);
     emailInput.val("");
     passwordInput.val("");
-    storeNameInput.val("");
+    storeInput.val("");
     descriptionInput.val("");
   });
 
@@ -35,10 +40,11 @@ $(document).ready(function() {
       password: password,
       storeName: storeName,
       description: description
-    }).then(function(data) {
-      window.location.replace(data);
+    })
+    //.then(function(data) {
+      //window.location.replace(data);
     // If there's an error, handle it by throwing up a bootstrap alert
-    }).catch(handleLoginErr);
+   // }).catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {

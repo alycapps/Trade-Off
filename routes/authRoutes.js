@@ -18,18 +18,22 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     console.log("Req.body: " + req.body);
+
+    console.log('STORE NAME???? ', req.body.storeName)
+    console.log("DESC??? ", req.body.description)
     db.User.create({
       email: req.body.email,
       password: req.body.password,
       storeName: req.body.storeName,
       description: req.body.description
-    }).then(function() {
-      res.redirect(307, "/api/login");
-    }).catch(function(err) {
-      console.log(err);
-      res.json(err);
-      res.status(422).json(err.errors[0].message);
-    });
+    })
+    // .then(function() {
+    //   res.redirect(307, "/api/login");
+    // }).catch(function(err) {
+    //   console.log(err);
+    //   res.json(err);
+    //   res.status(422).json(err.errors[0].message);
+    // });
   });
 
   // Route for logging user out
