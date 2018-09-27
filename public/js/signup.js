@@ -20,9 +20,11 @@ $(document).ready(function() {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password);
+    signUpUser(userData.email, userData.password, userData.storeName, userData.description);
     emailInput.val("");
     passwordInput.val("");
+    storeNameInput.val("");
+    descriptionInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
