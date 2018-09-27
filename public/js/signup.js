@@ -15,7 +15,7 @@ $(document).ready(function() {
       storeName: storeInput.val().trim(),
       description: descriptionInput.val().trim()
     };
-
+    console.log(userData);
     if (!userData.email || !userData.password) {
       return;
     }
