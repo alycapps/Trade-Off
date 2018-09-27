@@ -29,7 +29,7 @@ module.exports = function(app) {
   //   });
   // });
 
- // ========= User Bio Routes ===========
+ // ========= User Routes ===========
 
   //Get all users
   app.get("/api/users", function(req, res) {
@@ -49,44 +49,6 @@ module.exports = function(app) {
     });
   });
 
-  // // ========= User Bio Routes ===========
-
-  // //Get all userBios -- verify table is working
-  // app.get("/api/userBios", function(req, res) {
-  //   db.UserBio.findAll({}).then(function(dbUserBios) {
-  //     res.json(dbUserBios);
-  //   });
-  // });
-
-  // //Get the information of the logged in user
-  // app.get("/api/userBios/:id", function(req, res) {
-  //   db.UserBio.findAll({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function(dbUserBio) {
-  //     res.json(dbUserBio);
-  //   });
-  // });
-
-  // // Update a userBio
-  // app.post("/api/userBios/:id", function(req, res) {
-  //   db.UserBio.update(req.body).then(function(dbUserBios) {
-  //     res.json(dbUserBios);
-  //   });
-  // });
-
-  // // Delete a userBio
-  // app.delete("/api/userBios/:id", function(req, res) {
-  //   db.UserBio.destroy({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function(dbuserBios) {
-  //     res.json(dbuserBios);
-  //   });
-  // });
-
   // ========= Product Routes ===========
 
   //Get all products from all users
@@ -97,10 +59,10 @@ module.exports = function(app) {
   });
 
   //Get all products for the logged in user
-  app.get("/api/products/:userId", function(req, res) {
+  app.get("/api/products/:UserId", function(req, res) {
     db.Products.findAll({
       where: {
-        userId: req.params.userId
+        UserId: req.params.UserId
       }
     }).then(function(dbProducts) {
       res.json(dbProducts);
