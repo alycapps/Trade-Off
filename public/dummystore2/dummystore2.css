@@ -110,3 +110,11 @@ body {
 #email, #message {
     width: 360px;
 }
+
+.productList {
+    color: white;
+    font-size: 18px;
+    display: inline;
+    margin: 5px;
+
+}
