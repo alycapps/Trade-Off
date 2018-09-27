@@ -27,13 +27,13 @@ module.exports = function(app) {
       storeName: req.body.storeName,
       description: req.body.description
     })
-    // .then(function() {
-    //   res.redirect(307, "/api/login");
-    // }).catch(function(err) {
-    //   console.log(err);
-    //   res.json(err);
-    //   res.status(422).json(err.errors[0].message);
-    // });
+    .then(function() {
+      res.redirect(307, "/api/login");
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+      res.status(422).json(err.errors[0].message);
+    });
   });
 
   // Route for logging user out
