@@ -59,10 +59,10 @@ module.exports = function(app) {
   });
 
   //Get all products for the logged in user
-  app.get("/api/products/:UserId", function(req, res) {
+  app.get("/api/products/:userId", function(req, res) {
     db.Products.findAll({
       where: {
-        UserId: req.params.UserId
+        userId: req.params.userId
       }
     }).then(function(dbProducts) {
       res.json(dbProducts);

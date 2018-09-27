@@ -15,7 +15,7 @@ $(document).ready(function() {
       storeName: storeInput.val().trim(),
       description: descriptionInput.val().trim()
     };
-    console.log(userData);
+    console.log("User Data: " + userData);
     if (!userData.email || !userData.password) {
       return;
     }
@@ -23,21 +23,19 @@ $(document).ready(function() {
     signUpUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
-    storeInput.val("");
-    descriptionInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
-  function signUpUser(email, password) {
+  function signUpUser(email, password, storeName, description) {
     $.post("/api/signup", {
       email: email,
-      password: password, 
+      password: password,
       storeName: storeName,
       description: description
     }).then(function(data) {
       window.location.replace(data);
-      // If there's an error, handle it by throwing up a bootstrap alert
+    // If there's an error, handle it by throwing up a bootstrap alert
     }).catch(handleLoginErr);
   }
 
