@@ -1,3 +1,8 @@
+// var db = require("./models");
+
+// var userId = db.User.id;
+// console.log(userId);
+
 // When user clicks add btn
 $("#add").on("click", function(event) {
   event.preventDefault();
@@ -43,9 +48,9 @@ $("#add").on("click", function(event) {
   $("#userId").val("");
 });
 
-// When the page loads, grab all products for the logged in user --> currently grabbing all products NOT just for user
+// When the page loads, grab all products for the logged in user --> ***currently only works when hard-coded***
 $.get("/api/products/1", function(data) {
-  console.log(data);
+  console.log("Products for logged in user " + data);
 
   //If there is data
   if (data.length !== 0) {

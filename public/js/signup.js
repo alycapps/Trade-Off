@@ -3,13 +3,17 @@ $(document).ready(function() {
   var signUpForm = $("form.signup");
   var emailInput = $("input#email-input");
   var passwordInput = $("input#password-input");
+  var storeInput = $("input#store-input");
+  var descriptionInput = $("input#description-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
   signUpForm.on("submit", function(event) {
     event.preventDefault();
     var userData = {
       email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      password: passwordInput.val().trim(),
+      storeName: storeInput.val().trim(),
+      description: descriptionInput.val().trim()
     };
 
     if (!userData.email || !userData.password) {
@@ -19,6 +23,8 @@ $(document).ready(function() {
     signUpUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
+    storeInput.val("");
+    descriptionInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
@@ -26,7 +32,9 @@ $(document).ready(function() {
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
-      password: password
+      password: password, 
+      storeName: storeName,
+      description: description
     }).then(function(data) {
       window.location.replace(data);
       // If there's an error, handle it by throwing up a bootstrap alert
