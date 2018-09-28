@@ -16,16 +16,21 @@ $(document).ready(function() {
       description: descriptionInput.val().trim()
     };
     console.log("User Data: " + userData);
-   console.log('email:', emailInput.val().trim())
-   console.log('passsword:', passwordInput.val().trim())
-   console.log('store name :', storeInput.val().trim())
-   console.log('description:', descriptionInput.val().trim())
+    console.log("email:", emailInput.val().trim());
+    console.log("passsword:", passwordInput.val().trim());
+    console.log("store name :", storeInput.val().trim());
+    console.log("description:", descriptionInput.val().trim());
 
     if (!userData.email || !userData.password) {
       return;
     }
     // If we have an email and password, run the signUpUser function
-    signUpUser(userData.email, userData.password, userData.storeName, userData.description);
+    signUpUser(
+      userData.email,
+      userData.password,
+      userData.storeName,
+      userData.description
+    );
     emailInput.val("");
     passwordInput.val("");
     storeInput.val("");
@@ -41,10 +46,11 @@ $(document).ready(function() {
       storeName: storeName,
       description: description
     })
-    .then(function(data) {
-      window.location.replace(data);
-    //If there's an error, handle it by throwing up a bootstrap alert
-   }).catch(handleLoginErr);
+      .then(function(data) {
+        window.location.replace(data);
+        //If there's an error, handle it by throwing up a bootstrap alert
+      })
+      .catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {
