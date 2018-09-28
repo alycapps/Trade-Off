@@ -24,7 +24,7 @@ form.login {
 /*store front */
 .h2, .h4 {
   font-size: 30px;
-  color: whitesmoke;
+  font-family: fantasy;
 }
 .text-center {
   text-align: center;
@@ -139,6 +139,7 @@ body {
   width: 360px;
 }
 
+<<<<<<< HEAD
 .dataCss {
   color: white; 
   font-size: 20px;
@@ -146,3 +147,5 @@ body {
   margin-left: 5px;
 }
 
+=======
+>>>>>>> b3c30efbe4eb9530d0f1cbe8f11ddb6e0fa00339
