@@ -42,7 +42,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to their store
     if (req.user) {
-      res.redirect("/store");
+      res.redirect("/dummystore");
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
@@ -50,7 +50,7 @@ module.exports = function(app) {
   app.get("/signup", function(req, res) {
     // If the user already has an account send them to the store
     if (req.user) {
-      res.redirect("/store");
+      res.redirect("/dummystore");
     }
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
@@ -65,7 +65,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/store.html"));
   });
 
-  // app.get("/dummystore", isAuthenticated, function(req, res) {
-  //   res.sendFile(path.join(__dirname, "./dummystore2/dummystore2.html"));
-  // });
+  app.get("/dummystore", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/dummystore2/dummystore2.html"));
+  });
 };
