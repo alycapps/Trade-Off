@@ -1,5 +1,4 @@
 $(document).ready(function() {
- 
   // Get references to page elements
   var $exampleText = $("#example-text");
   var $exampleDescription = $("#example-description");
@@ -133,7 +132,7 @@ $(document).ready(function() {
 
   // If this is the home page, render the list of examples, otherwise render the detail data
   var page = window.location.pathname;
-  if(page === "/members") {
+  if (page === "/members") {
     getMemberName();
     refreshExamples();
   } else {

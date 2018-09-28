@@ -1,8 +1,3 @@
-// var db = require("./models");
-
-// var userId = db.User.id;
-// console.log(userId);
-
 // When user clicks add btn
 $("#add").on("click", function(event) {
   event.preventDefault();
