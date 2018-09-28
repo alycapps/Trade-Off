@@ -1,9 +1,9 @@
-$("#purchase").on("click", function() {
-  $(".purchase-form").css("display", "block");
-  $(".store-details").css("display", "none");
-  $(".trade-form").css("display", "none");
-  $("#contactFs").css("display", "none");
-});
+// $("#purchase").on("click", function() {
+//   $(".purchase-form").css("display", "block");
+//   $(".store-details").css("display", "none");
+//   $(".trade-form").css("display", "none");
+//   $("#contactFs").css("display", "none");
+// });
 
 $(".stock-button").on("click", function() {
   $(".update-form").css("display", "block");
