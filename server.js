@@ -26,7 +26,6 @@ require("./routes/htmlRoutes.js")(app);
 require("./routes/authRoutes.js")(app);
 require("./routes/apiRoutes.js")(app);
 
-
 var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
@@ -34,7 +33,6 @@ var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
-
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync(syncOptions).then(function() {
