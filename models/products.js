@@ -18,16 +18,17 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       isInt: true,
       allowNull: false
-    },
-    negotiable: {
-      type: DataTypes.BOOLEAN
-    },
-    barter: {
-      type: DataTypes.STRING,
-      validate: {
-        len: [1, 300]
-      }
-    },
+    }
+    // },
+    // negotiable: {
+    //   type: DataTypes.BOOLEAN
+    // },
+    // barter: {
+    //   type: DataTypes.STRING,
+    //   validate: {
+    //     len: [1, 300]
+    //   }
+    // },
   });
 
   Products.associate = function(models) {

@@ -17,11 +17,11 @@ $("#add").on("click", function(event) {
       .trim(),
     price: $("#price")
       .val()
-      .trim(),
-    //negotiable: $("#negotiable").val().trim(),
-    userId: $("#userId")
-      .val()
       .trim()
+    //negotiable: $("#negotiable").val().trim(),
+    // userId: $("#userId")
+    //   .val()
+    //   .trim()
   };
 
   console.log("Values from form: " + newProduct);
@@ -42,10 +42,10 @@ $("#add").on("click", function(event) {
     });
 
   //Empty each input box by replacing the value with an empty string
-  $("#item-name").val(""),
-  $("#description").val(""),
-  $("#price").val(""),
-  $("#userId").val("");
+  $("#item-name").val("");
+  $("#description").val("");
+  $("#price").val("");
+  // $("#userId").val("");
 });
 
 // When the page loads, grab all products for the logged in user --> ***currently only works when hard-coded***
