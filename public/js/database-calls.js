@@ -13,10 +13,6 @@ $("#add").on("click", function(event) {
     price: $("#price")
       .val()
       .trim()
-    //negotiable: $("#negotiable").val().trim(),
-    // userId: $("#userId")
-    //   .val()
-    //   .trim()
   };
 
   console.log("Values from form: " + newProduct);
@@ -27,11 +23,9 @@ $("#add").on("click", function(event) {
     .then(function() {
       var row = $("<div>");
 
-      row.append("<p>" + data[i].item + "</p>");
-      row.append("<p>" + data[i].description + "</p>");
-      row.append("<p>" + data[i].price + "</p>");
-      // row.append("<p>" + data[i].negotiable + "</p>");
-      //row.append("<p>" + data[i].barter + "</p>");
+      row.append("<p class='dataCss'>" + data[i].item + data[i].description + data[i].price + "</p>");
+      // row.append("<p class='dataCss'>" + data[i].description + "</p>");
+      // row.append("<p class='dataCss'>" + data[i].price + "</p>");
 
       $("#stock-items").prepend(row);
     });
@@ -40,7 +34,6 @@ $("#add").on("click", function(event) {
   $("#item-name").val("");
   $("#description").val("");
   $("#price").val("");
-  // $("#userId").val("");
 });
 
 // When the page loads, grab all products for the logged in user --> ***currently only works when hard-coded***
@@ -55,6 +48,7 @@ $.get("/api/products/", function(data) {
       row.append("<p>" + data[i].item + "</p>");
       row.append("<p>" + data[i].description + "</p>");
       row.append("<p>" + data[i].price + "</p>");
+      row.append("<p>" + data[i].id + "</p>");
       //row.append("<p>" + data[i].negotiable + "</p>");
       //row.append("<p>" + data[i].barter + "</p>");
 
