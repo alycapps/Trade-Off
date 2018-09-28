@@ -58,16 +58,16 @@ module.exports = function(app) {
     });
   });
 
-  //Get all products for the logged in user
-  app.get("/api/products/:userId", function(req, res) {
-    db.Products.findAll({
-      where: {
-        userId: req.params.userId
-      }
-    }).then(function(dbProducts) {
-      res.json(dbProducts);
-    });
-  });
+  // //Get all products for the logged in user
+  // app.get("/api/products/:UserId", function(req, res) {
+  //   db.Products.findAll({
+  //     where: {
+  //       UserId: req.params.UserId
+  //     }
+  //   }).then(function(dbProducts) {
+  //     res.json(dbProducts);
+  //   });
+  // });
 
   // Create a new product
   app.post("/api/products", function(req, res) {

@@ -49,7 +49,7 @@ $("#add").on("click", function(event) {
 });
 
 // When the page loads, grab all products for the logged in user --> ***currently only works when hard-coded***
-$.get("/api/products/1", function(data) {
+$.get("/api/products/", function(data) {
   console.log("Products for logged in user " + data);
 
   //If there is data
