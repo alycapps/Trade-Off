@@ -45,9 +45,9 @@ body {
 }
 
 .buttons{
-    width: 120px;
+    width: 250px;
     background-color: brown;
-    margin-left: 40px;
+    margin-left: 55px;
     border: none;
     border-radius: 25px;
     color: white;
@@ -109,4 +109,13 @@ body {
 
 #email, #message {
     width: 360px;
+}
+
+.dataCss {
+    color: white; 
+    font-size: 20px;
+    display: inline;
+    margin-left: 5px;
+    padding: 5px;
+    text-align: left;
 }
