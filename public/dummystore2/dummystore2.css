@@ -8,21 +8,17 @@
     border-radius: 25px;
     margin-left:10px;
 }
-
 .store-details {
     display: block;
 }
-
 .olive-image{
     border: brown 3px ridge;
 }
-
 body {
     background-repeat: no-repeat;
     width: 100%;
     max-height: 300px;
 }
-
 .shop-box{
     width:380px;
     border-radius: 25px;
@@ -30,20 +26,16 @@ body {
     font-family: cursive;
     background-color: 	rgba(150, 0, 0, 0.75);
     margin-top: 10px;
-
 }
-
 .text-decor {
     color: white;
 }
-
 .text-decor2 {
     color: white;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
 }
-
 .buttons{
     width: 120px;
     background-color: brown;
@@ -55,7 +47,6 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .buttons2 {
     width: 110px;
     background-color: White;
@@ -72,7 +63,6 @@ body {
     width: 700px;
     height: 40px;
 }
-
 .stock-button {
     width: 350px;
     border-radius: 25px;
@@ -83,11 +73,9 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.75), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .button-minibox {
     width:390px;
 }
-
 .update-form, .purchase-form, .trade-form {
     background-color: 	rgba(150, 0, 0, 0.75);
     width: 380px;
@@ -96,7 +84,6 @@ body {
     padding-bottom: 10px;
     margin-bottom: 25px;
 }
-
 #contactFs {
     background-color: 	rgba(150, 0, 0, 0.75);
     width: 380px;
@@ -106,7 +93,6 @@ body {
     margin-bottom: 25px;
     padding: 10px;
 }
-
 #email, #message {
     width: 360px;
 }
