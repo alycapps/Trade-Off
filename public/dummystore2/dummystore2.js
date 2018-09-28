@@ -18,12 +18,21 @@ $("#trade").on("click", function(){
   $("#contactFs").css("display", "none");
 });
 
+//$("#storelist").on("click", function() {
+ // $(".store-details").css("display", "block");
+//  $(".trade-form").css("display", "none");
+  //$(".update-form").css("display", "none");
+ // $(".purchase-form").css("display", "none");
+ // $("#contactFs").css("display", "none");
+//});
+
 $("#back").on("click", function(){
   $(".store-details").css("display", "block");
   $(".trade-form").css("display", "none");
   $(".update-form").css("display", "none");
   $(".purchase-form").css("display", "none");
   $("#contactFs").css("display", "none");
+  //$(".contact-form").css("display", "none");
 });
 
 $("#contact").on("click", function(){
