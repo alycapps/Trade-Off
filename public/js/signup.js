@@ -18,6 +18,9 @@ $(document).ready(function() {
     // console.log("User Data: " + userData);
     // console.log("email:", emailInput.val().trim());
     // console.log("passsword:", passwordInput.val().trim());
+    console.log("User Data: " + userData);
+    console.log("email:", emailInput.val().trim());
+    console.log("passsword:", passwordInput.val().trim());
     // console.log("store name :", storeInput.val().trim());
     // console.log("description:", descriptionInput.val().trim());
 
@@ -35,6 +38,9 @@ $(document).ready(function() {
     passwordInput.val("");
     // storeInput.val("");
     // descriptionInput.val("");
+    );
+    emailInput.val("");
+    passwordInput.val("")
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
@@ -45,6 +51,7 @@ $(document).ready(function() {
       password: password,
       // storeName: storeName,
       // description: description
+      password: password
     })
       .then(function(data) {
         window.location.replace(data);

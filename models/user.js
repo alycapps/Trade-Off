@@ -18,15 +18,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    //Store name cannot be null
+    //Store name is for future development
     storeName: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     },
-    //The store description must be less than 250 characters
+    //The store description is for future development
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
       len: [0, 250],
       msg: "Must be less than 250 characters."
     }
@@ -38,7 +36,11 @@ module.exports = function(sequelize, DataTypes) {
   // Hooks are automatic methods that run during various phases of the User Model lifecycle
   // In this case, before a User is created, we will automatically hash their password
   User.hook("beforeCreate", function(user) {
-    user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
+    user.password = bcrypt.hashSync(
+      user.password,
+      bcrypt.genSaltSync(10),
+      null
+    );
   });
 
   User.associate = function(models) {
