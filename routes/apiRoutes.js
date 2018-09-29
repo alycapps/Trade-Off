@@ -1,12 +1,6 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  //Get all users
-  app.get("/api/users", function(req, res) {
-    db.Users.findAll({}).then(function(dbUsers) {
-      res.json(dbUsers);
-    });
-  });
 
   //Get the information of the logged in user
   app.get("/api/users/:id", function(req, res) {
@@ -28,16 +22,12 @@ module.exports = function(app) {
     });
   });
 
-  // //Get all products for the logged in user
-  // app.get("/api/products/:UserId", function(req, res) {
-  //   db.Products.findAll({
-  //     where: {
-  //       UserId: req.params.UserId
-  //     }
-  //   }).then(function(dbProducts) {
-  //     res.json(dbProducts);
-  //   });
-  // });
+  // Get a product by id
+  app.get("/api/products/:id", function(req, res) {
+    db.Products.findOne({where: {id: req.params.id}}).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
 
   // Create a new product
   app.post("/api/products", function(req, res) {

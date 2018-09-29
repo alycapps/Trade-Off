@@ -26,19 +26,6 @@
       </div>
     </div>
   </nav>
-  
-  <div class="container">
-    <div class="row">
-
-        <div class="store-details col-xs-4">    
-            <img src="./dummystore2/images/olive.jpg" width="350px" class="olive-image" alt="Artisan Olive Logo">
-            
-        <div class="row">
-            <div class="button-minibox col-xs-4">
-                <button class="stock-button">UPDATE STOCK</button>
-            </div>
-        </div>
-    </nav>
 
     <div class="container">
         <div class="row">
@@ -48,7 +35,7 @@
 
                 <div class="row">
                     <div class="button-minibox col-xs-4">
-                        <button class="stock-button">UPDATE STOCK</button>
+                        <button class="stock-button">ADD ITEM</button>
                     </div>
                 </div>
 
@@ -61,7 +48,7 @@
             </div>
 
             <div class="update-form col-xs-4">
-                <h2 class="text-decor">Update Products Info</h2>
+                <h2 class="text-decor">Add New Product</h2>
                 <form class="login">
                 <div class="form-group">
                     <label class="text-decor" for="item-name">Item</label>
@@ -72,26 +59,18 @@
                     <input type="text" class="form-control" id="description" placeholder="Description">
                 </div>
                 <div class="form-group">
-                    <label class="text-decor" for="price">Price</label>
+                    <label class="text-decor" for="price">Price/Barter</label>
                     <input type="integer" class="form-control" id="price" placeholder="Price">
                 </div>
-                <!-- <div class="form-group">
-                    <label class="text-decor" for="userId">User Id</label>
-                    <input type="item" class="form-control" id="userId" placeholder="12345">
-                </div> -->
-                <!-- <div class="form-group">
-                    <label class="text-decor" for="addStock">Add Stock</label>
-                    <input type="integer" class="form-control" id="addStock" placeholder="0">
-                </div> -->
-
-                    <button id="update" type="submit" class="buttons2">Update</button>
+                
+                    <!-- <button id="update" type="submit" class="buttons2">Update</button> -->
                     <button id="add" type="submit" class="buttons2">Add</button>
-                    <button id="delete" type="submit" class="buttons2">Delete Stock</button>
+                    <!-- <button id="delete" type="submit" class="buttons2">Delete Stock</button> -->
                     <button id="back" type="submit" class="buttons2">BACK</button>
                 </form>
             </div>
 
-            <div class="purchase-form col-xs-4">
+            <!-- <div class="purchase-form col-xs-4">
                 <h2 class="text-decor">Purchase Products</h2>
                 <form class="login">
                     <div class="form-group">
@@ -109,9 +88,9 @@
                     <button id="buy" type="submit" class="buttons2">Purchase</button>
                     <button id="back" type="submit" class="buttons2">BACK</button>
                 </form>
-            </div>
+            </div> -->
 
-            <div class="trade-form col-xs-4">
+            <!-- <div class="trade-form col-xs-4">
                 <h2 class="text-decor">Trade Products</h2>
                 <form class="login">
                     <div class="form-group">
@@ -129,7 +108,7 @@
                     <button type="sendOffer" class="buttons2">Send Offer</button>
                     <button id="back" type="submit" class="buttons2">BACK</button>
                 </form>
-            </div>
+            </div> -->
 
 
         <div id="contactFs" class="col-xs-4">
@@ -146,29 +125,21 @@
                     <button id="back" type="submit" class="buttons2">Back</button>
                 </form>
             </div>
-
-
-
-        <div class="stock-items dataCss col-xs-6" id="stock-items">
-            <!-- <table>
-                <thead>
-                    <tr>
-                        <th>Item Name</th>
-                        <th>Description</th>
-                        <th>Price (or Trade)</th>
-                        <th>Item ID</th>
-                    </tr>
-                </thead>
-                <tbody id="table">
-                </tbody>
-            </table> -->
-            <p><strong>Item Name | Description | Price (or Trade) | Item ID</strong></p>
-        </div>
             </div>
 
+            <div class="col-xs-6 button-box">
+                <button id='contact' class="buttons">CONTACT</button>
+                <button id="storelist" class="buttons">
+                    <a href="./store">ALL STORES</a>
+                </button>
+            </div>
 
+            
+        <div class="stock-items dataCss col-xs-6" >
+            <p><strong>Item Name | Description | Price (or Trade) | Item ID</strong></p>
+            <div id="stock-items"></div>
         </div>
-    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="./dummystore2/dummystore2.js"></script>
