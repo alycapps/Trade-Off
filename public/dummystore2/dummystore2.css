@@ -96,3 +96,10 @@ body {
 #email, #message {
     width: 360px;
 }
+.dataCss {
+    color: white; 
+    font-size: 20px;
+    display: inline;
+    margin-left: 5px;
+}
+

@@ -144,7 +144,15 @@ body {
   width: 360px;
 }
 
+
 .navbar-default .navbar-brand {
   color: #333333;
   font-family: fantasy;
+}
+
+.dataCss {
+  color: white; 
+  font-size: 20px;
+  display: inline;
+  margin-left: 5px;
 }

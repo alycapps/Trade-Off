@@ -2,18 +2,40 @@
 <html lang="en">
 
 <head>
-    <title>Passport Authentication</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-    <link rel="stylesheet" href="./dummystore2/dummystore2.css">
+  <title>Trade Off</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"> 
+  <link rel="stylesheet" href="./dummystore2/dummystore2.css">
 </head>
 
 <body background="./dummystore2/images/green.jpg">
 
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+            <a class="navbar-brand">
+                    <center>TRADE OFF</center>
+                  </a>
+                </div>
+          
+                <div class="member-name-wrapper pull-right">Welcome
+                  <span class="member-name"></span>
+                  <a href="/logout">Logout</a>
+                </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <div class="row">
+
+        <div class="store-details col-xs-4">    
+            <img src="./dummystore2/images/olive.jpg" width="350px" class="olive-image" alt="Artisan Olive Logo">
+            
+        <div class="row">
+            <div class="button-minibox col-xs-4">
+                <button class="stock-button">UPDATE STOCK</button>
             </div>
         </div>
     </nav>
@@ -41,26 +63,27 @@
             <div class="update-form col-xs-4">
                 <h2 class="text-decor">Update Products Info</h2>
                 <form class="login">
-                    <div class="form-group">
-                        <label class="text-decor" for="item-name">Item</label>
-                        <input type="text" class="form-control" id="item-name" placeholder="Item Name">
-                    </div>
-                    <div class="form-group">
-                        <label class="text-decor" for="description">Description</label>
-                        <input type="text" class="form-control" id="description" placeholder="Description">
-                    </div>
-                    <div class="form-group">
-                        <label class="text-decor" for="price">Price</label>
-                        <input type="integer" class="form-control" id="price" placeholder="Price">
-                    </div>
-                    <div class="form-group">
-                        <label class="text-decor" for="userId">User Id</label>
-                        <input type="item" class="form-control" id="userId" placeholder="12345">
-                    </div>
-                    <div class="form-group">
-                        <label class="text-decor" for="addStock">Add Stock</label>
-                        <input type="integer" class="form-control" id="addStock" placeholder="0">
-                    </div>
+                <div class="form-group">
+                    <label class="text-decor" for="item-name">Item</label>
+                    <input type="text" class="form-control" id="item-name" placeholder="Item Name">
+                </div>
+                <div class="form-group">
+                    <label class="text-decor" for="description">Description</label>
+                    <input type="text" class="form-control" id="description" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <label class="text-decor" for="price">Price</label>
+                    <input type="integer" class="form-control" id="price" placeholder="Price">
+                </div>
+                <!-- <div class="form-group">
+                    <label class="text-decor" for="userId">User Id</label>
+                    <input type="item" class="form-control" id="userId" placeholder="12345">
+                </div> -->
+                <!-- <div class="form-group">
+                    <label class="text-decor" for="addStock">Add Stock</label>
+                    <input type="integer" class="form-control" id="addStock" placeholder="0">
+                </div> -->
+
                     <button id="update" type="submit" class="buttons2">Update</button>
                     <button id="add" type="submit" class="buttons2">Add</button>
                     <button id="delete" type="submit" class="buttons2">Delete Stock</button>
@@ -128,6 +151,7 @@
                 </div>
             </div>
 
+
             <div class="col-xs-6 button-box">
                 <!-- <button id="purchase" class="buttons">PURCHASE</button> -->
                 <!--<button id="trade" class="buttons">TRADE</button>-->
@@ -140,6 +164,7 @@
             <div class="stock-items col-xs-6" id="stock-items">
 
             </div>
+
 
         </div>
     </div>
