@@ -22,10 +22,10 @@ module.exports = function(app) {
   });
 
   //app.get("/dummystore", function(req, res) {
-    //if(req.user) {
-      //res.redirect("/store");
-   // }
-    //res.sendFile(path.join(__dirname, "../public/dummystore2.html"));
+  //if(req.user) {
+  //res.redirect("/store");
+  // }
+  //res.sendFile(path.join(__dirname, "../public/dummystore2.html"));
   //});
 
   // Here we've add our isAuthenticated middleware to this route.
@@ -39,6 +39,8 @@ module.exports = function(app) {
   });
 
   app.get("/dummystore", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/dummystore2/dummystore2.html"));
+    res.sendFile(
+      path.join(__dirname, "../public/dummystore2/dummystore2.html")
+    );
   });
 };
