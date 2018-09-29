@@ -22,6 +22,13 @@ module.exports = function(app) {
     });
   });
 
+  // Get a product by id
+  app.get("/api/products/:id", function(req, res) {
+    db.Products.findOne({where: {id: req.params.id}}).then(function(dbProducts) {
+      res.json(dbProducts);
+    });
+  });
+
   // Create a new product
   app.post("/api/products", function(req, res) {
     db.Products.create(req.body).then(function(dbProducts) {
