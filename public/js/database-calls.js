@@ -25,21 +25,21 @@ $("#add").on("click", function(event) {
   $.post("/api/products/", newProduct)
     // On success, run the following code
     .then(function() {
-      var row = $("<div>");
+      var row = $("<tr>");
 
-      row.append("<p>" + data[i].item + "</p>");
-      row.append("<p>" + data[i].description + "</p>");
-      row.append("<p>" + data[i].price + "</p>");
+      row.append("<td>" + data[i].item);
+      row.append("<td>" + data[i].description);
+      row.append("<td>" + data[i].price + "</td>");
       // row.append("<p>" + data[i].negotiable + "</p>");
       //row.append("<p>" + data[i].barter + "</p>");
 
-      $("#stock-items").prepend(row);
+      $("#tableBody").append(row);
     });
 
   //Empty each input box by replacing the value with an empty string
-  $("#item-name").val("");
-  $("#description").val("");
-  $("#price").val("");
+  $("#item-name").val();
+  $("#description").val();
+  $("#price").val();
   // $("#userId").val("");
 });
 
@@ -51,15 +51,15 @@ $.get("/api/products/", function(data) {
   if (data.length !== 0) {
     //Loop through the user's products
     for (var i = 0; i < data.length; i++) {
-      var row = $("<div>");
-      row.append("<p>" + data[i].item + "</p>");
-      row.append("<p>" + data[i].description + "</p>");
-      row.append("<p>" + data[i].price + "</p>");
+      var row = $("<tr>");
+      row.append("<td>" + data[i].item);
+      row.append("<td>" + data[i].description);
+      row.append("<td>" + data[i].price + "</td>");
       //row.append("<p>" + data[i].negotiable + "</p>");
       //row.append("<p>" + data[i].barter + "</p>");
 
       //Display them
-      $("#stock-items").prepend(row);
+      $("#tableBody").append(row);
     }
   }
 });

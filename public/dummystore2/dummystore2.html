@@ -116,7 +116,7 @@
                     <br><br>
                     <input id="email" type="email" name="_replyto" placeholder="Your email" required>
                     <br><br>
-                    <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                    <textarea id="message" name="message" placeholder="Please include in your message the item you would like to recieve and at least two options that you are willing to offer." required></textarea>
                     <br><br>
                     <button class="buttons2" type="submit">Send</button>
                     <button id="back" type="submit" class="buttons2">Back</button>
@@ -132,7 +132,17 @@
         </div>
 
         <div class="stock-items col-xs-6" id="stock-items">
-           
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Description</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
         </div>
 
     </div>
