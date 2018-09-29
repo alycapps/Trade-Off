@@ -45,7 +45,15 @@ $(document).ready(function() {
       console.log(data);
       var $products = data.map(function(product) {
         var $a = $("<a>")
-          .text(product.item + " | " + product.description + " | " + product.price + " | " + product.id)
+          .text(
+            product.item +
+              " | " +
+              product.description +
+              " | " +
+              product.price +
+              " | " +
+              product.id
+          )
           .attr("href", "/product/" + product.id);
 
         var $li = $("<li>")
@@ -58,7 +66,7 @@ $(document).ready(function() {
         var $button = $("<button>")
           .addClass("btn pull-right tradeBtn")
           .text("TRADE");
- 
+
         $li.append($button);
 
         return $li;
@@ -116,7 +124,6 @@ $(document).ready(function() {
       $memberName.text(data.email);
     });
   };
-
 
   // Add event listeners to the submit and delete buttons
   $addBtn.on("click", handleFormSubmit);

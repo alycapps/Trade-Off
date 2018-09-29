@@ -4,15 +4,14 @@ $(".stock-button").on("click", function() {
   $("#contactFs").css("display", "none");
 });
 
-$("#trade").on("click", function(){
+$("#trade").on("click", function() {
   $(".trade-form").css("display", "block");
   $(".purchase-form").css("display", "none");
   $(".store-details").css("display", "none");
   $("#contactFs").css("display", "none");
 });
 
-
-$("#back").on("click", function(){
+$("#back").on("click", function() {
   $(".store-details").css("display", "block");
   $(".trade-form").css("display", "none");
   $(".update-form").css("display", "none");
@@ -21,7 +20,7 @@ $("#back").on("click", function(){
   //$(".contact-form").css("display", "none");
 });
 
-$("#contact").on("click", function(){
+$("#contact").on("click", function() {
   $("#contactFs").css("display", "block");
   $(".store-details").css("display", "none");
   $(".trade-form").css("display", "none");
