@@ -30,7 +30,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .center {
   line-height: 1.1;
   color: #333333;
 }
-
 .text-center {
   text-align: center;
   color: blue;
@@ -143,12 +142,10 @@ body {
 #email, #message {
   width: 360px;
 }
-
 .navbar-default .navbar-brand {
   color: #333333;
   font-family: fantasy;
 }
-
 .dataCss {
   color: white; 
   font-size: 20px;
