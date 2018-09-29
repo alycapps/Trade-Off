@@ -23,18 +23,12 @@ describe("GET /api/examples", function() {
       {
         item: "Table",
         description: "brown coffee table",
-        price: "100",
-        negotiable: 0,
-        barter: "0",
-        userId: 1
+        price: "100"
       },
       {
         item: "Surfboard",
         description: "yellow surfboard, like new quality",
-        price: "20",
-        negotiable: 1,
-        barter: "1",
-        userId: 2
+        price: "20"
       }
     ]).then(function() {
       // Request the route that returns all examples
@@ -50,17 +44,14 @@ describe("GET /api/examples", function() {
 
         expect(responseBody)
           .to.be.an("array")
-          .that.has.lengthOf(6);
+          .that.has.lengthOf(3);
 
         expect(responseBody[0])
           .to.be.an("object")
           .that.includes({
             item: "Table",
             description: "brown coffee table",
-            price: "100",
-            negotiable: 0,
-            barter: "0",
-            userId: 1
+            price: "100"
           });
 
         expect(responseBody[1])
@@ -68,10 +59,7 @@ describe("GET /api/examples", function() {
           .that.includes({
             item: "Surfboard",
             description: "yellow surfboard, like new quality",
-            price: "20",
-            negotiable: 1,
-            barter: "1",
-            userId: 2
+            price: "20"
           });
 
         // The `done` function is used to end any asynchronous tests
