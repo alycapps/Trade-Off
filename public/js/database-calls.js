@@ -128,4 +128,11 @@ $(document).ready(function() {
     getMemberName();
     refreshProducts();
   }
+
+  $(document).on("click", ".tradeBtn", function() {
+    $(".trade-form").css("display", "none");
+    $(".purchase-form").css("display", "none");
+    $(".store-details").css("display", "none");
+    $("#contactFs").css("display", "block");
+  });
 });
