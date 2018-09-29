@@ -15,6 +15,9 @@ $(document).ready(function() {
       // storeName: storeInput.val().trim(),
       // description: descriptionInput.val().trim()
     };
+    // console.log("User Data: " + userData);
+    // console.log("email:", emailInput.val().trim());
+    // console.log("passsword:", passwordInput.val().trim());
     console.log("User Data: " + userData);
     console.log("email:", emailInput.val().trim());
     console.log("passsword:", passwordInput.val().trim());
@@ -28,6 +31,13 @@ $(document).ready(function() {
     signUpUser(
       userData.email,
       userData.password
+      // userData.storeName,
+      // userData.description
+    );
+    emailInput.val("");
+    passwordInput.val("");
+    // storeInput.val("");
+    // descriptionInput.val("");
     );
     emailInput.val("");
     passwordInput.val("")
@@ -38,6 +48,9 @@ $(document).ready(function() {
   function signUpUser(email, password) {
     $.post("/api/signup", {
       email: email,
+      password: password,
+      // storeName: storeName,
+      // description: description
       password: password
     })
       .then(function(data) {

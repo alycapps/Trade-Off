@@ -4,5 +4,4 @@ CREATE DATABASE store_db;
 USE store_db;
 
 select * FROM Users;
-select * from UserBios;
 select * from Products;
