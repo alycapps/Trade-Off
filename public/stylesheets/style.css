@@ -24,7 +24,7 @@ form.login {
 /*store front */
 .h2, .h4 {
   font-size: 30px;
-  font-family: fantasy;
+  color: whitesmoke;
 }
 .text-center {
   text-align: center;
@@ -138,4 +138,3 @@ body {
 #email, #message {
   width: 360px;
 }
-
