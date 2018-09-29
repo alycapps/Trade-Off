@@ -15,9 +15,11 @@ module.exports = function(sequelize, DataTypes) {
       }
     },
     price: {
-      type: DataTypes.INTEGER,
-      isInt: true,
-      allowNull: false
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 150]
+      }
     }
     // },
     // negotiable: {
