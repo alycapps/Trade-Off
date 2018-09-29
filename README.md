@@ -4,7 +4,6 @@
 
 > This application was made for the truly small business owner. With creation of an account users are given a store where they can update and manage stock. Users are also able to browse the stores of other users where they can them email the store owner about items they would like to barter or pay for.
 
-![](header.png) - screenshot
 
 ## Getting Started
 
@@ -19,7 +18,7 @@ This project makes it easy to:
 
 ## Deployment
 
-The Trade Off application is deployed on Heroku. Check it out [here!](https://)
+The Trade Off application is deployed on Heroku. Check it out [here!](https://tranquil-citadel-47640.herokuapp.com/)
 
 ## Built With
 

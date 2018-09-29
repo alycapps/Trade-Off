@@ -19,8 +19,6 @@ $(document).ready(function() {
     signUpUser(userData.email, userData.password);
     emailInput.val("");
     passwordInput.val("");
-    emailInput.val("");
-    passwordInput.val("");;
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
