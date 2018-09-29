@@ -19,13 +19,13 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     console.log("Req.body: " + req.body);
 
-    console.log("STORE NAME???? ", req.body.storeName);
-    console.log("DESC??? ", req.body.description);
+    // console.log("STORE NAME???? ", req.body.storeName);
+    // console.log("DESC??? ", req.body.description);
     db.User.create({
       email: req.body.email,
-      password: req.body.password,
-      storeName: req.body.storeName,
-      description: req.body.description
+      password: req.body.password
+      // storeName: req.body.storeName,
+      // description: req.body.description
     })
       .then(function() {
         res.redirect(307, "/api/login");
