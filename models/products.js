@@ -21,23 +21,12 @@ module.exports = function(sequelize, DataTypes) {
         len: [1, 150]
       }
     }
-    // },
-    // negotiable: {
-    //   type: DataTypes.BOOLEAN
-    // },
-    // barter: {
-    //   type: DataTypes.STRING,
-    //   validate: {
-    //     len: [1, 300]
-    //   }
-    // },
   });
 
   Products.associate = function(models) {
     Products.belongsTo(models.User, {
       foreignKey: {
         name: "userId"
-      //  allowNull: false
       }
     });
   };
